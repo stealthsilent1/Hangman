@@ -1,0 +1,187 @@
+#include <vector>
+#include <iostream>
+#include <string>
+
+
+
+  std::string codeword = "codeacademy";
+  std::string answer = "___________";
+  int misses = 0;
+  
+// Declare functions
+
+void display_misses(int misses);
+void greet();
+
+
+
+// Define functions
+
+void greet(){
+  std::cout << "=============" << "\n";
+  std::cout << "UFO: The Game" << "\n";
+  std::cout << "=============" << "\n";
+  std::cout << "Instructions: save your friend" << "\n";
+  std::cout << "from alien abduction by guessing" << "\n";
+  std::cout << "the letters in the codeword" << "\n";
+};
+
+std::string guess(char input){ // takes a letter as an input, outputs hangman style correct letters shown. 
+    bool found_letter = 0;
+    
+    for(int x = 0;x < codeword.size();x++){
+        if (codeword[x] == input){
+            answer[x] = input; // easiest way of changing a character
+            found_letter = 1;
+        }
+        
+        }
+        if (found_letter == 0){
+            misses++;
+        }
+        return answer;
+    }; 
+    
+
+
+
+void display_misses(int misses) {
+
+  if (misses == 0 || misses == 1) {
+
+    std::cout << "                 .                            \n";
+    std::cout << "                 |                            \n";
+    std::cout << "              .-\"^\"-.                       \n";
+    std::cout << "             /_....._\\                       \n";
+    std::cout << "         .-\"`         `\"-.                  \n";
+    std::cout << "        (  ooo  ooo  ooo  )                   \n";
+    std::cout << "         '-.,_________,.-'    ,-----------.   \n";
+    std::cout << "              /     \\        (  Send help! ) \n";
+    std::cout << "             /   0   \\      / `-----------'  \n";
+    std::cout << "            /  --|--  \\    /                 \n";
+    std::cout << "           /     |     \\                     \n";
+    std::cout << "          /     / \\     \\                   \n";
+    std::cout << "         /               \\                   \n";
+
+  }
+  else if (misses == 2) {
+
+    std::cout << "                 .                            \n";
+    std::cout << "                 |                            \n";
+    std::cout << "              .-\"^\"-.                       \n";
+    std::cout << "             /_....._\\                       \n";
+    std::cout << "         .-\"`         `\"-.                  \n";
+    std::cout << "        (  ooo  ooo  ooo  )                   \n";
+    std::cout << "         '-.,_________,.-'    ,-----------.   \n";
+    std::cout << "              /  0  \\        (  Send help! ) \n";
+    std::cout << "             / --|-- \\      / `-----------'  \n";
+    std::cout << "            /    |    \\    /                 \n";
+    std::cout << "           /    / \\    \\                    \n";
+    std::cout << "          /             \\                    \n";
+    std::cout << "         /               \\                   \n";
+
+  }
+
+  else if (misses == 3) {
+
+    std::cout << "                 .                            \n";
+    std::cout << "                 |                            \n";
+    std::cout << "              .-\"^\"-.                       \n";
+    std::cout << "             /_....._\\                       \n";
+    std::cout << "         .-\"`         `\"-.                  \n";
+    std::cout << "        (  ooo  ooo  ooo  )                   \n";
+    std::cout << "         '-.,_________,.-'    ,-----------.   \n";
+    std::cout << "              /--|--\\        (  Send help! ) \n";
+    std::cout << "             /   |   \\      / `-----------'  \n";
+    std::cout << "            /   / \\   \\    /                \n";
+    std::cout << "           /           \\                     \n";
+    std::cout << "          /             \\                    \n";
+    std::cout << "         /               \\                   \n";
+
+  }
+  else if (misses == 4) {
+
+    std::cout << "                 .                            \n";
+    std::cout << "                 |                            \n";
+    std::cout << "              .-\"^\"-.                       \n";
+    std::cout << "             /_....._\\                       \n";
+    std::cout << "         .-\"`         `\"-.                  \n";
+    std::cout << "        (  ooo  ooo  ooo  )                   \n";
+    std::cout << "         '-.,_________,.-'    ,-----------.   \n";
+    std::cout << "              /  |  \\        (  Send help! ) \n";
+    std::cout << "             /  / \\  \\      / `-----------' \n";
+    std::cout << "            /         \\    /                 \n";
+    std::cout << "           /           \\                     \n";
+    std::cout << "          /             \\                    \n";
+    std::cout << "         /               \\                   \n";
+
+  }
+  else if (misses == 5) {
+
+    std::cout << "                 .                            \n";
+    std::cout << "                 |                            \n";
+    std::cout << "              .-\"^\"-.                       \n";
+    std::cout << "             /_....._\\                       \n";
+    std::cout << "         .-\"`         `\"-.                  \n";
+    std::cout << "        (  ooo  ooo  ooo  )                   \n";
+    std::cout << "         '-.,_________,.-'    ,-----------.   \n";
+    std::cout << "              / / \\ \\        (  Send help! )\n";
+    std::cout << "             /       \\      / `-----------'  \n";
+    std::cout << "            /         \\    /                 \n";
+    std::cout << "           /           \\                     \n";
+    std::cout << "          /             \\                    \n";
+    std::cout << "         /               \\                   \n";
+
+  }
+  else if (misses == 6) {
+
+    std::cout << "                 .                            \n";
+    std::cout << "                 |                            \n";
+    std::cout << "              .-\"^\"-.                       \n";
+    std::cout << "             /_....._\\                       \n";
+    std::cout << "         .-\"`         `\"-.                  \n";
+    std::cout << "        (  ooo  ooo  ooo  )                   \n";
+    std::cout << "         '-.,_________,.-'    ,           -----------.   \n";
+    std::cout << "              /     \\        (Wow, its actually nice in here!)  \n";
+    std::cout << "             /       \\      / `         -----------'  \n";
+    std::cout << "            /         \\    /                 \n";
+    std::cout << "           /           \\                     \n";
+    std::cout << "          /             \\                    \n";
+    std::cout << "         /               \\                   \n";
+
+  }
+
+}
+
+
+int main() {
+    
+  char input;
+                // I delcared int misses = 0 AGAIN, once global and one more here in main, and the main variable as a reference, not the global, even when global was changing.  
+  
+  
+  
+
+  
+  
+  greet();
+  
+    while(misses < 7){
+        
+  std::cout << "Guess a letter" << "\n";
+  std::cin >> input; 
+  
+  
+  display_misses(misses);
+  std::cout << guess(input) << misses << "\n";
+ 
+  
+  if(answer == codeword){
+      std::cout << "Congradulations, you WIN!!!!" << "\n";
+      break; 
+  }
+    }
+    if (misses > 6){
+        std::cout << "Game over, you lose!" << "\n";
+    }
+}
